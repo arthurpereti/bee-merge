@@ -32,11 +32,13 @@ class Obj{
 
 class Bee extends Obj{
     dir = 0
+    diry = 0
     pts = 0
     vidas = 3
 
     move(){
         this.x += this.dir
+        this.y += this.diry
     }
 
     colid(objeto){
@@ -91,5 +93,3 @@ class Texto{
         des.fillText(text,x,y)
     }
 }
-
-//teste

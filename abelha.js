@@ -23,9 +23,11 @@ document.addEventListener('keydown', (event)=>{
         // console.log('pressionado a tecla "d" ')
         bee.dir = 5
     }else if(event.key === 's'){
-        console.log('pressionado a tecla "s" ')
+        // console.log('pressionado a tecla "s" ')
+        bee.diry = 5
     }else if(event.key === 'w'){
-        console.log('pressionado a tecla "w" ')
+        // console.log('pressionado a tecla "w" ')
+        bee.diry = - 5
     }
 })
 document.addEventListener('keyup', (event)=>{
@@ -36,9 +38,11 @@ document.addEventListener('keyup', (event)=>{
         // console.log('soltou a tecla "d" ')
         bee.dir = 0
     }else if(event.key === 's'){
-        console.log('soltou a tecla "s" ')
+        // console.log('soltou a tecla "s" ')
+        bee.diry = 0
     }else if(event.key === 'w'){
-        console.log('soltou a tecla "w" ')
+        // console.log('soltou a tecla "w" ')
+        bee.diry = 0
     }
 })
 
