@@ -13,6 +13,15 @@ let val_vidas = new Texto()
 let texto_game_over = new Texto()
 let jogar = true
 
+
+const som1 = new Audio('/assets/abelha.wav')
+som1.volume = 1.0
+som1.loop = true
+const som2 = new Audio('/assets/coin.wav')
+som1.volume = 1.0
+const som3 = new Audio('/assets/perdeu.wav')
+som1.volume = 1.0
+
 // let spider2 = new Obj(0,0,100,100,'darkorchid')
 
 document.addEventListener('keydown', (event)=>{
@@ -23,10 +32,13 @@ document.addEventListener('keydown', (event)=>{
         // console.log('pressionado a tecla "d" ')
         bee.dir = 5
     }else if(event.key === 's'){
-        console.log('pressionado a tecla "s" ')
+        // console.log('pressionado a tecla "s" ')
+        bee.diry = 5
     }else if(event.key === 'w'){
-        console.log('pressionado a tecla "w" ')
+        // console.log('pressionado a tecla "w" ')
+        bee.diry = - 5
     }
+    som1.play()
 })
 document.addEventListener('keyup', (event)=>{
     if(event.key === 'a'){
@@ -36,16 +48,22 @@ document.addEventListener('keyup', (event)=>{
         // console.log('soltou a tecla "d" ')
         bee.dir = 0
     }else if(event.key === 's'){
-        console.log('soltou a tecla "s" ')
+        // console.log('soltou a tecla "s" ')
+        bee.diry = 0
     }else if(event.key === 'w'){
-        console.log('soltou a tecla "w" ')
+        // console.log('soltou a tecla "w" ')
+        bee.diry = 0
     }
+
 })
 
 function game_over(){
     if(bee.vidas <= 0){
         jogar = false
+        som1.pause()
+        som3.play()
     }
+    
 }
 
 function colisao(){
@@ -56,6 +74,7 @@ function colisao(){
     if(bee.colid(flor)){
         flor.recomeca()
         bee.pts +=1
+        som2.play()
     }
 }
 

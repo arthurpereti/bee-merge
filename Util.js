@@ -32,11 +32,23 @@ class Obj{
 
 class Bee extends Obj{
     dir = 0
+    diry = 0
     pts = 0
     vidas = 3
 
     move(){
         this.x += this.dir
+        if(this.x<= 16){
+            this.x = 16
+        }else if(this.x >= 400){
+            this.x = 400
+        }
+        this.y += this.diry
+        if(this.y<= 50){
+            this.y = 50
+        }else if(this.y >= 550){
+            this.y = 550
+        }
     }
 
     colid(objeto){
