@@ -14,13 +14,13 @@ let texto_game_over = new Texto()
 let jogar = true
 
 
-const som1 = new Audio('/assets/abelha.wav')
+const som1 = new Audio('assets/abelha.wav')
 som1.volume = 1.0
 som1.loop = true
-const som2 = new Audio('/assets/coin.wav')
-som1.volume = 1.0
-const som3 = new Audio('/assets/perdeu.wav')
-som1.volume = 1.0
+const som2 = new Audio('assets/coin.wav')
+som2.volume = 1.0
+const som3 = new Audio('assets/perdeu.wav')
+som3.volume = 1.0
 
 // let spider2 = new Obj(0,0,100,100,'darkorchid')
 
